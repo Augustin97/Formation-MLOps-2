@@ -26,6 +26,6 @@ jobs:
       - name: Run tests
         run: |
         python -m pytest tests/test_unit
-        behave tests/test_functional/features
+        python -m behave tests/test_functional/features
       
 
