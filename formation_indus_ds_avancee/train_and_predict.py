@@ -24,7 +24,7 @@ def train_model(features: pd.DataFrame, model_registry_folder: str) -> None:
         model.fit(X, y)
         mlflow.sklearn.log_model(
             sk_model=model,
-            artifact_path="sklearn_model",
+            name="sklearn_model",
             registered_model_name="sklearn_model"
         )
     time_str = time.strftime('%Y%m%d-%H%M%S')
